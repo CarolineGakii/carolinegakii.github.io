@@ -6,714 +6,167 @@
 <title>Caroline Gakii | Content &amp; Technical Writer · AI &amp; Machine Learning</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --bg: #ffffff;
-    --surface: #f7f8fa;
-    --border: #e5e7eb;
-    --text: #1f2328;
-    --muted: #57606a;
-    --accent: #3b82d4;
-    --accent-dark: #2563b8;
-    --purple: #7c5cd8;
-    --green: #16a34a;
-    --max: 820px;
+    --bg: #ffffff; --surface: #f7f8fa; --border: #e5e7eb;
+    --text: #1f2328; --muted: #57606a; --accent: #3b82d4;
+    --accent-dark: #2563b8; --purple: #7c5cd8; --green: #16a34a; --max: 820px;
   }
-
   html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: 15px; line-height: 1.7; color: var(--text); background: var(--bg); }
 
-  body {
-    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-    color: var(--text);
-    background: var(--bg);
-  }
-
-  /* NAV */
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(255,255,255,0.96);
-    border-bottom: 1px solid var(--border);
-    padding: 0 24px;
-  }
-  .nav-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 56px;
-  }
-  .nav-logo {
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--text);
-    text-decoration: none;
-    letter-spacing: -0.3px;
-  }
-  .nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-  }
-  .nav-links a {
-    text-decoration: none;
-    color: var(--muted);
-    font-size: 14px;
-    font-weight: 500;
-    transition: color 0.15s;
-  }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.96); border-bottom: 1px solid var(--border); padding: 0 24px; }
+  .nav-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .nav-logo { font-weight: 700; font-size: 15px; color: var(--text); text-decoration: none; letter-spacing: -0.3px; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 500; transition: color 0.15s; }
   .nav-links a:hover { color: var(--accent); }
-  .nav-cta {
-    background: var(--accent);
-    color: #fff !important;
-    padding: 6px 16px;
-    border-radius: 6px;
-    font-size: 13px !important;
-  }
-  .nav-cta:hover { background: var(--accent-dark); color: #fff !important; }
+  .nav-cta { background: var(--accent); color: #fff !important; padding: 6px 16px; border-radius: 6px; font-size: 13px !important; }
+  .nav-cta:hover { background: var(--accent-dark) !important; }
 
-  /* SECTIONS */
   section { padding: 72px 24px; }
   section:nth-child(even) { background: var(--surface); }
   .container { max-width: var(--max); margin: 0 auto; }
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; color: var(--text); margin-bottom: 8px; }
+  .section-sub { color: var(--muted); font-size: 15px; margin-bottom: 40px; max-width: 560px; }
 
-  .section-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
-  h2 {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: var(--text);
-    margin-bottom: 8px;
-  }
-  .section-sub {
-    color: var(--muted);
-    font-size: 15px;
-    margin-bottom: 40px;
-    max-width: 560px;
-  }
-
-  /* HERO */
-  #hero {
-    padding: 88px 24px 80px;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-  }
-  .hero-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 48px;
-    align-items: center;
-  }
-  .hero-badge {
-    display: inline-block;
-    background: #eff6ff;
-    color: var(--accent);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    padding: 4px 12px;
-    border-radius: 20px;
-    border: 1px solid #bfdbfe;
-    margin-bottom: 20px;
-  }
-  .hero-name {
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: -1.5px;
-    line-height: 1.15;
-    color: var(--text);
-    margin-bottom: 12px;
-  }
-  .hero-title {
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--accent);
-    margin-bottom: 16px;
-    letter-spacing: -0.2px;
-  }
-  .hero-desc {
-    font-size: 16px;
-    color: var(--muted);
-    max-width: 500px;
-    line-height: 1.7;
-    margin-bottom: 32px;
-  }
-  .hero-btns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    padding: 10px 20px;
-    border-radius: 7px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: opacity 0.15s, background 0.15s;
-    cursor: pointer;
-    border: none;
-  }
+  #hero { padding: 88px 24px 80px; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .hero-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+  .hero-badge { display: inline-block; background: #eff6ff; color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: 0.5px; padding: 4px 12px; border-radius: 20px; border: 1px solid #bfdbfe; margin-bottom: 20px; }
+  .hero-name { font-size: 42px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.15; color: var(--text); margin-bottom: 12px; }
+  .hero-title { font-size: 17px; font-weight: 500; color: var(--accent); margin-bottom: 16px; letter-spacing: -0.2px; }
+  .hero-desc { font-size: 16px; color: var(--muted); max-width: 500px; line-height: 1.7; margin-bottom: 32px; }
+  .hero-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-flex; align-items: center; gap: 7px; padding: 10px 20px; border-radius: 7px; font-size: 14px; font-weight: 600; text-decoration: none; transition: opacity 0.15s, background 0.15s; cursor: pointer; border: none; }
   .btn-primary { background: var(--accent); color: #fff; }
   .btn-primary:hover { background: var(--accent-dark); }
   .btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
   .btn-secondary:hover { background: var(--border); }
   .btn-outline { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
   .btn-outline:hover { background: #eff6ff; }
+  .hero-avatar { width: 160px; height: 160px; border-radius: 50%; background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%); border: 3px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .avatar-initials { font-size: 48px; font-weight: 800; color: var(--accent); letter-spacing: -2px; }
 
-  .hero-avatar {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
-    border: 3px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    overflow: hidden;
-  }
-  .avatar-initials {
-    font-size: 48px;
-    font-weight: 800;
-    color: var(--accent);
-    letter-spacing: -2px;
-  }
-
-  /* STATS BAR */
-  .stats-bar {
-    background: var(--text);
-    padding: 20px 24px;
-  }
-  .stats-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-  }
-  .stat-item {
-    text-align: center;
-    border-right: 1px solid #374151;
-    padding: 4px 0;
-  }
+  .stats-bar { background: var(--text); padding: 20px 24px; }
+  .stats-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat-item { text-align: center; border-right: 1px solid #374151; padding: 4px 0; }
   .stat-item:last-child { border-right: none; }
-  .stat-num {
-    font-size: 22px;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -0.5px;
-    display: block;
-  }
-  .stat-label {
-    font-size: 12px;
-    color: #9ca3af;
-    font-weight: 500;
-  }
+  .stat-num { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.5px; display: block; }
+  .stat-label { font-size: 12px; color: #9ca3af; font-weight: 500; }
 
-  /* ABOUT */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
-  }
-  .about-text p {
-    color: var(--muted);
-    margin-bottom: 16px;
-    font-size: 15px;
-  }
-  .about-text p:last-child { margin-bottom: 0; }
-  .about-highlight {
-    font-weight: 600;
-    color: var(--text);
-  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .about-text p { color: var(--muted); margin-bottom: 16px; font-size: 15px; }
+  .about-highlight { font-weight: 600; color: var(--text); }
   .skills-block { display: flex; flex-direction: column; gap: 20px; }
-  .skill-group-label {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 8px;
-  }
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .tag {
-    font-size: 12px;
-    font-weight: 500;
-    padding: 4px 10px;
-    border-radius: 5px;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--text);
-  }
+  .skill-group-label { font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 5px; border: 1px solid var(--border); background: var(--bg); color: var(--text); }
   .tag-blue { border-color: #bfdbfe; background: #eff6ff; color: var(--accent-dark); }
   .tag-purple { border-color: #ddd6fe; background: #f5f3ff; color: var(--purple); }
   .tag-green { border-color: #bbf7d0; background: #f0fdf4; color: var(--green); }
 
-  /* SERVICES */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  .service-card {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 24px;
-  }
-  .service-icon {
-    font-size: 22px;
-    margin-bottom: 12px;
-    display: block;
-  }
-  .service-card h3 {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: var(--text);
-  }
-  .service-card p {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .service-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 24px; }
+  .service-icon { font-size: 22px; margin-bottom: 12px; display: block; }
+  .service-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+  .service-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-  /* WRITING PORTFOLIO */
-  .writing-filters {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 28px;
-  }
-  .filter-btn {
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--muted);
-    cursor: pointer;
-  }
-  .filter-btn.active {
-    background: var(--accent);
-    color: #fff;
-    border-color: var(--accent);
-  }
-  .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-  .article-card {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.15s;
-  }
+  .writing-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+  .filter-btn { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid var(--border); background: var(--bg); color: var(--muted); cursor: pointer; }
+  .filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .articles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .article-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit; transition: border-color 0.15s; }
   .article-card:hover { border-color: var(--accent); }
-  .article-cat {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    color: var(--accent);
-  }
-  .article-card h3 {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1.45;
-  }
-  .article-meta {
-    font-size: 12px;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+  .article-cat { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--accent); }
+  .article-card h3 { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.45; }
+  .article-meta { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
   .article-meta span { color: var(--border); }
-  .article-engagement {
-    font-size: 12px;
-    color: var(--green);
-    font-weight: 600;
-  }
+  .article-engagement { font-size: 12px; color: var(--green); font-weight: 600; }
 
-  /* PROJECTS */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  .project-card {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .project-card h3 {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-  }
-  .project-card p {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
-    flex: 1;
-  }
+  .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .project-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+  .project-card h3 { font-size: 15px; font-weight: 700; color: var(--text); }
+  .project-card p { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
   .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: none;
-    margin-top: 4px;
-  }
+  .project-link { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; margin-top: 4px; }
   .project-link:hover { color: var(--accent-dark); }
 
-  /* EXPERIENCE TIMELINE */
-  .timeline { display: flex; flex-direction: column; gap: 0; }
-  .timeline-item {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 24px;
-    padding-bottom: 36px;
-    position: relative;
-  }
-  .timeline-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 118px;
-    top: 8px;
-    bottom: 0;
-    width: 1px;
-    background: var(--border);
-  }
-  .timeline-date {
-    font-size: 12px;
-    color: var(--muted);
-    font-weight: 500;
-    padding-top: 2px;
-    text-align: right;
-  }
-  .timeline-dot {
-    position: absolute;
-    left: 112px;
-    top: 6px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--accent);
-    border: 2px solid var(--bg);
-    outline: 1.5px solid var(--accent);
-  }
+  .timeline { display: flex; flex-direction: column; }
+  .timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding-bottom: 36px; position: relative; }
+  .timeline-item:not(:last-child)::after { content: ''; position: absolute; left: 118px; top: 8px; bottom: 0; width: 1px; background: var(--border); }
+  .timeline-date { font-size: 12px; color: var(--muted); font-weight: 500; padding-top: 2px; text-align: right; }
+  .timeline-dot { position: absolute; left: 112px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); outline: 1.5px solid var(--accent); }
   .timeline-content { padding-left: 4px; }
-  .timeline-role {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 2px;
-  }
-  .timeline-company {
-    font-size: 13px;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  .timeline-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .timeline-list li {
-    font-size: 13px;
-    color: var(--muted);
-    padding-left: 14px;
-    position: relative;
-  }
-  .timeline-list li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--border);
-    font-size: 11px;
-    top: 2px;
-  }
+  .timeline-role { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+  .timeline-company { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+  .timeline-list { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+  .timeline-list li { font-size: 13px; color: var(--muted); padding-left: 14px; position: relative; }
+  .timeline-list li::before { content: '—'; position: absolute; left: 0; color: var(--border); font-size: 11px; top: 2px; }
 
-  /* PUBLICATIONS */
-  .pubs-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-  }
-  .pub-card {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.15s;
-  }
+  .pubs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .pub-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; text-decoration: none; color: inherit; transition: border-color 0.15s; display: block; }
   .pub-card:hover { border-color: var(--accent); }
-  .pub-icon {
-    font-size: 28px;
-    margin-bottom: 8px;
-    display: block;
-  }
-  .pub-name {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-  .pub-desc {
-    font-size: 12px;
-    color: var(--muted);
-  }
+  .pub-icon { font-size: 28px; margin-bottom: 8px; display: block; }
+  .pub-name { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .pub-desc { font-size: 12px; color: var(--muted); }
 
-  /* RESUME */
-  .resume-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  .resume-card {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+  .resume-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .resume-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
   .resume-card h3 { font-size: 17px; font-weight: 700; color: var(--text); }
   .resume-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
   .resume-skills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
 
   /* TESTIMONIALS */
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-  .testimonial-card {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 24px;
-  }
-  .stars { color: #f59e0b; font-size: 14px; margin-bottom: 10px; letter-spacing: 2px; }
-  .testimonial-text {
-    font-size: 14px;
-    color: var(--muted);
-    font-style: italic;
-    line-height: 1.7;
-    margin-bottom: 16px;
-  }
-  .testimonial-author {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text);
-  }
+  .reviews-summary { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; padding: 16px 20px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; width: fit-content; }
+  .reviews-score { font-size: 36px; font-weight: 800; color: var(--text); letter-spacing: -1px; }
+  .reviews-stars { color: #f59e0b; font-size: 18px; letter-spacing: 3px; display: block; margin-bottom: 2px; }
+  .reviews-count { font-size: 13px; color: var(--muted); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .testimonial-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+  .stars { color: #f59e0b; font-size: 13px; letter-spacing: 2px; }
+  .testimonial-text { font-size: 14px; color: var(--muted); font-style: italic; line-height: 1.7; flex: 1; }
+  .testimonial-author { font-size: 13px; font-weight: 700; color: var(--text); }
   .testimonial-role { font-size: 12px; color: var(--muted); }
 
-  /* CONTACT */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
-  }
-  .contact-left p {
-    font-size: 15px;
-    color: var(--muted);
-    margin-bottom: 28px;
-    line-height: 1.7;
-  }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .contact-left p { font-size: 15px; color: var(--muted); margin-bottom: 28px; line-height: 1.7; }
   .contact-links { display: flex; flex-direction: column; gap: 12px; }
-  .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    color: var(--text);
-    font-size: 14px;
-    font-weight: 500;
-    padding: 12px 16px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--bg);
-    transition: border-color 0.15s;
-  }
+  .contact-link { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); font-size: 14px; font-weight: 500; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); transition: border-color 0.15s; }
   .contact-link:hover { border-color: var(--accent); color: var(--accent); }
   .contact-icon { font-size: 18px; width: 24px; text-align: center; }
-  .contact-right {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 28px;
-  }
-  .contact-right h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: var(--text);
-  }
+  .contact-right { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 28px; }
+  .contact-right h3 { font-size: 16px; font-weight: 700; margin-bottom: 20px; color: var(--text); }
   .form-field { margin-bottom: 16px; }
-  .form-field label {
-    display: block;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 6px;
-  }
-  .form-field input,
-  .form-field textarea,
-  .form-field select {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    font-size: 14px;
-    font-family: inherit;
-    color: var(--text);
-    background: var(--surface);
-    outline: none;
-    resize: vertical;
-  }
-  .form-field input:focus,
-  .form-field textarea:focus,
-  .form-field select:focus { border-color: var(--accent); background: #fff; }
-  .form-note {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 12px;
-    text-align: center;
-  }
+  .form-field label { display: block; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .form-field input, .form-field textarea, .form-field select { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; font-family: inherit; color: var(--text); background: var(--surface); outline: none; resize: vertical; }
+  .form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-color: var(--accent); background: #fff; }
+  .form-note { font-size: 12px; color: var(--muted); margin-top: 12px; text-align: center; }
+  .avail-badge { display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; color: var(--green); border: 1px solid #bbf7d0; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+  .avail-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); display: inline-block; }
 
-  /* AVAILABILITY BADGE */
-  .avail-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: #f0fdf4;
-    color: var(--green);
-    border: 1px solid #bbf7d0;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-bottom: 24px;
-  }
-  .avail-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--green);
-    display: inline-block;
-  }
-
-  /* FOOTER */
-  footer {
-    background: var(--text);
-    padding: 40px 24px 24px;
-    color: #9ca3af;
-  }
-  .footer-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-  }
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 28px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid #374151;
-  }
+  footer { background: var(--text); padding: 40px 24px 24px; color: #9ca3af; }
+  .footer-inner { max-width: var(--max); margin: 0 auto; }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid #374151; }
   .footer-brand { color: #fff; font-size: 17px; font-weight: 700; margin-bottom: 6px; }
   .footer-tagline { font-size: 13px; color: #9ca3af; }
-  .footer-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .footer-links a {
-    color: #9ca3af;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    transition: color 0.15s;
-  }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+  .footer-links a { color: #9ca3af; text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.15s; }
   .footer-links a:hover { color: #fff; }
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-  }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
   .footer-copyright { color: #6b7280; }
 
-  /* DIVIDER */
-  .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
-
-  /* RESPONSIVE */
   @media (max-width: 640px) {
     .hero-inner { grid-template-columns: 1fr; }
     .hero-avatar { display: none; }
     .hero-name { font-size: 32px; }
     .stats-inner { grid-template-columns: repeat(2, 1fr); }
     .stat-item:nth-child(2) { border-right: none; }
-    .about-grid,
-    .articles-grid,
-    .projects-grid,
-    .resume-cards,
-    .testimonials-grid,
-    .contact-grid { grid-template-columns: 1fr; }
+    .about-grid, .articles-grid, .projects-grid, .resume-cards, .testimonials-grid, .contact-grid { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
     .pubs-grid { grid-template-columns: repeat(2, 1fr); }
     .timeline-item { grid-template-columns: 1fr; }
     .timeline-date { text-align: left; }
-    .timeline-item::after { display: none; }
-    .timeline-dot { display: none; }
+    .timeline-item::after, .timeline-dot { display: none; }
   }
 </style>
 </head>
@@ -747,7 +200,7 @@
         <a href="#resume" class="btn btn-primary">📄 Download Resume</a>
         <a href="#writing" class="btn btn-secondary">✍ View Portfolio</a>
         <a href="#contact" class="btn btn-outline">💼 Hire Me</a>
-        <a href="#contact" class="btn btn-secondary">📧 Contact Me</a>
+        <a href="mailto:caratechconsultancy@gmail.com" class="btn btn-secondary">📧 Contact Me</a>
       </div>
     </div>
     <div class="hero-avatar">
@@ -759,22 +212,10 @@
 
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat-item">
-      <span class="stat-num">9+</span>
-      <span class="stat-label">Years Writing</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">140+</span>
-      <span class="stat-label">Articles Published</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">$20K+</span>
-      <span class="stat-label">Earned on Upwork</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">970+</span>
-      <span class="stat-label">Medium Followers</span>
-    </div>
+    <div class="stat-item"><span class="stat-num">9+</span><span class="stat-label">Years Writing</span></div>
+    <div class="stat-item"><span class="stat-num">140+</span><span class="stat-label">Articles Published</span></div>
+    <div class="stat-item"><span class="stat-num">$20K+</span><span class="stat-label">Earned on Upwork</span></div>
+    <div class="stat-item"><span class="stat-num">970+</span><span class="stat-label">Medium Followers</span></div>
   </div>
 </div>
 
@@ -787,52 +228,33 @@
       <div class="about-text">
         <p>I'm a <span class="about-highlight">Content &amp; Technical Writer with 9 years of experience</span> helping organizations communicate complex technology with clarity and confidence. I specialize in artificial intelligence, machine learning, data science, and software engineering.</p>
         <p>Since 2020, I've partnered with international startups, SaaS companies, and AI organizations through Upwork — earning <span class="about-highlight">Top Rated status</span> with consistent 5-star reviews and long-term client relationships. I've published <span class="about-highlight">140+ articles on Medium</span>, founded <span class="about-highlight">Mindful Data Science</span>, and contributed to established publications including Good Vibes Good Life and Catharsis.</p>
-        <p>Alongside writing, I'm <span class="about-highlight">pursuing a Master's in Data Science</span> at Meru University of Science and Technology. I evaluate frontier language models at Turing, and my Master's research focuses on AI-powered computer vision for medical diagnosis — a project combining ResNet50V2, EfficientNetV2, and CoAtNet for histopathology image classification.</p>
+        <p>Alongside writing, I'm <span class="about-highlight">pursuing a Master's in Data Science</span> at Meru University of Science and Technology. I evaluate frontier language models at Turing, and my Master's research focuses on AI-powered computer vision for medical diagnosis — combining ResNet50V2, EfficientNetV2, and CoAtNet for histopathology image classification.</p>
         <p>I don't just write <em>about</em> AI. I build with it, evaluate it, and understand it at a technical level that most writers don't.</p>
-        <div style="margin-top:20px">
-          <a href="#contact" class="btn btn-primary">Work with me</a>
-        </div>
+        <div style="margin-top:20px"><a href="#contact" class="btn btn-primary">Work with me</a></div>
       </div>
       <div class="skills-block">
         <div>
           <div class="skill-group-label">Technical Writing</div>
           <div class="skill-tags">
-            <span class="tag tag-blue">AI Content</span>
-            <span class="tag tag-blue">ML Tutorials</span>
-            <span class="tag tag-blue">White Papers</span>
-            <span class="tag tag-blue">Case Studies</span>
-            <span class="tag tag-blue">API Docs</span>
-            <span class="tag tag-blue">SEO Writing</span>
+            <span class="tag tag-blue">AI Content</span><span class="tag tag-blue">ML Tutorials</span><span class="tag tag-blue">White Papers</span><span class="tag tag-blue">Case Studies</span><span class="tag tag-blue">API Docs</span><span class="tag tag-blue">SEO Writing</span>
           </div>
         </div>
         <div>
           <div class="skill-group-label">AI &amp; Machine Learning</div>
           <div class="skill-tags">
-            <span class="tag tag-purple">LLM Evaluation</span>
-            <span class="tag tag-purple">Computer Vision</span>
-            <span class="tag tag-purple">TensorFlow</span>
-            <span class="tag tag-purple">CNN Models</span>
-            <span class="tag tag-purple">Prompt Engineering</span>
+            <span class="tag tag-purple">LLM Evaluation</span><span class="tag tag-purple">Computer Vision</span><span class="tag tag-purple">TensorFlow</span><span class="tag tag-purple">CNN Models</span><span class="tag tag-purple">Prompt Engineering</span>
           </div>
         </div>
         <div>
           <div class="skill-group-label">Data Science</div>
           <div class="skill-tags">
-            <span class="tag tag-green">Python</span>
-            <span class="tag tag-green">SQL</span>
-            <span class="tag tag-green">Pandas</span>
-            <span class="tag tag-green">NumPy</span>
-            <span class="tag tag-green">Data Visualization</span>
+            <span class="tag tag-green">Python</span><span class="tag tag-green">SQL</span><span class="tag tag-green">Pandas</span><span class="tag tag-green">NumPy</span><span class="tag tag-green">Data Visualization</span>
           </div>
         </div>
         <div>
           <div class="skill-group-label">Platforms</div>
           <div class="skill-tags">
-            <span class="tag">Upwork Top Rated</span>
-            <span class="tag">Medium</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">Jupyter</span>
-            <span class="tag">Git</span>
+            <span class="tag">Upwork Top Rated</span><span class="tag">Medium</span><span class="tag">GitHub</span><span class="tag">Jupyter</span><span class="tag">Git</span>
           </div>
         </div>
       </div>
@@ -847,40 +269,14 @@
     <h2>Writing Services</h2>
     <p class="section-sub">From long-form technical articles to white papers and developer tutorials — I create content that builds authority and drives results.</p>
     <div class="services-grid">
-      <div class="service-card">
-        <span class="service-icon">🤖</span>
-        <h3>AI &amp; ML Content</h3>
-        <p>Technical articles, explainers, and thought leadership on artificial intelligence, large language models, machine learning, and data science for technical and non-technical audiences.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">📄</span>
-        <h3>White Papers &amp; Case Studies</h3>
-        <p>Research-driven long-form content that positions your company as an authority. I interview subject matter experts, synthesize research papers, and produce publication-ready documents.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">💻</span>
-        <h3>Developer Tutorials</h3>
-        <p>Step-by-step technical tutorials, documentation, and educational content for developer audiences. Python, machine learning workflows, APIs, and cloud infrastructure.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">🔍</span>
-        <h3>SEO Technical Blogs</h3>
-        <p>Technically accurate, SEO-optimized blog posts that rank on Google while preserving technical depth. No keyword stuffing — just useful content that engineers actually read.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">📙</span>
-        <h3>Technical Documentation</h3>
-        <p>API documentation, product guides, onboarding tutorials, and developer resources that reduce support burden and improve user experience.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">💡</span>
-        <h3>Thought Leadership</h3>
-        <p>Ghostwritten essays, opinion pieces, and executive content that builds personal and brand authority in the AI, data, and technology space.</p>
-      </div>
+      <div class="service-card"><span class="service-icon">🤖</span><h3>AI &amp; ML Content</h3><p>Technical articles, explainers, and thought leadership on artificial intelligence, large language models, machine learning, and data science for technical and non-technical audiences.</p></div>
+      <div class="service-card"><span class="service-icon">📄</span><h3>White Papers &amp; Case Studies</h3><p>Research-driven long-form content that positions your company as an authority. I interview subject matter experts, synthesize research papers, and produce publication-ready documents.</p></div>
+      <div class="service-card"><span class="service-icon">💻</span><h3>Developer Tutorials</h3><p>Step-by-step technical tutorials, documentation, and educational content for developer audiences — Python, machine learning workflows, APIs, and cloud infrastructure.</p></div>
+      <div class="service-card"><span class="service-icon">🔍</span><h3>SEO Technical Blogs</h3><p>Technically accurate, SEO-optimized blog posts that rank on Google while preserving technical depth. No keyword stuffing — just useful content that engineers actually read.</p></div>
+      <div class="service-card"><span class="service-icon">📙</span><h3>Technical Documentation</h3><p>API documentation, product guides, onboarding tutorials, and developer resources that reduce support burden and improve user experience.</p></div>
+      <div class="service-card"><span class="service-icon">💡</span><h3>Thought Leadership</h3><p>Ghostwritten essays, opinion pieces, and executive content that builds personal and brand authority in the AI, data, and technology space.</p></div>
     </div>
-    <div style="margin-top:32px;text-align:center">
-      <a href="#contact" class="btn btn-primary">📧  Get a Free Quote</a>
-    </div>
+    <div style="margin-top:32px;text-align:center"><a href="mailto:caratechconsultancy@gmail.com" class="btn btn-primary">📧  Get a Free Quote</a></div>
   </div>
 </section>
 
@@ -898,46 +294,14 @@
       <button class="filter-btn">Personal Essays</button>
     </div>
     <div class="articles-grid">
-      <a href="https://medium.com/@carolinegakii" class="article-card" target="_blank" rel="noopener">
-        <span class="article-cat">Machine Learning</span>
-        <h3>How Domain Shift Affects Machine Learning Models in Production</h3>
-        <div class="article-meta">Medium <span>·</span> Mindful Data Science</div>
-        <div class="article-engagement">3,100+ claps</div>
-      </a>
-      <a href="https://medium.com/@carolinegakii" class="article-card" target="_blank" rel="noopener">
-        <span class="article-cat">Computer Vision</span>
-        <h3>What Building an AI Digital Microscope Taught Me About Medical Imaging</h3>
-        <div class="article-meta">Medium <span>·</span> Mindful Data Science</div>
-        <div class="article-engagement">1,600+ claps</div>
-      </a>
-      <a href="https://medium.com/@carolinegakii" class="article-card" target="_blank" rel="noopener">
-        <span class="article-cat">AI Evaluation</span>
-        <h3>Why Model Accuracy Isn't Enough: A Guide to Evaluation Metrics That Actually Matter</h3>
-        <div class="article-meta">Medium <span>·</span> Mindful Data Science</div>
-        <div class="article-engagement">400+ claps</div>
-      </a>
-      <a href="https://medium.com/@carolinegakii" class="article-card" target="_blank" rel="noopener">
-        <span class="article-cat">Deep Learning</span>
-        <h3>Understanding CNNs Without the Math: A Practical Guide for Technical Writers</h3>
-        <div class="article-meta">Medium</div>
-        <div class="article-engagement">Mindful Data Science</div>
-      </a>
-      <a href="https://medium.com/@carolinegakii" class="article-card" target="_blank" rel="noopener">
-        <span class="article-cat">Personal</span>
-        <h3>My Journey from Technical Writer to AI Researcher: What I Wish I'd Known</h3>
-        <div class="article-meta">Medium <span>·</span> Good Vibes Good Life</div>
-        <div class="article-engagement">Featured publication</div>
-      </a>
-      <a href="https://medium.com/@carolinegakii" class="article-card" target="_blank" rel="noopener">
-        <span class="article-cat">LLMs</span>
-        <h3>Inside LLM Evaluation: What Happens When AI Gets Things Wrong</h3>
-        <div class="article-meta">Medium <span>·</span> Mindful Data Science</div>
-        <div class="article-engagement">Mindful Data Science</div>
-      </a>
+      <a href="https://medium.com/@CarolineWriteups" class="article-card" target="_blank" rel="noopener"><span class="article-cat">Machine Learning</span><h3>How Domain Shift Affects Machine Learning Models in Production</h3><div class="article-meta">Medium <span>·</span> Mindful Data Science</div><div class="article-engagement">3,100+ claps</div></a>
+      <a href="https://medium.com/@CarolineWriteups" class="article-card" target="_blank" rel="noopener"><span class="article-cat">Computer Vision</span><h3>What Building an AI Digital Microscope Taught Me About Medical Imaging</h3><div class="article-meta">Medium <span>·</span> Mindful Data Science</div><div class="article-engagement">1,600+ claps</div></a>
+      <a href="https://medium.com/@CarolineWriteups" class="article-card" target="_blank" rel="noopener"><span class="article-cat">AI Evaluation</span><h3>Why Model Accuracy Isn't Enough: A Guide to Evaluation Metrics That Actually Matter</h3><div class="article-meta">Medium <span>·</span> Mindful Data Science</div><div class="article-engagement">400+ claps</div></a>
+      <a href="https://medium.com/@CarolineWriteups" class="article-card" target="_blank" rel="noopener"><span class="article-cat">Deep Learning</span><h3>Understanding CNNs Without the Math: A Practical Guide</h3><div class="article-meta">Medium <span>·</span> Mindful Data Science</div><div class="article-engagement">Mindful Data Science</div></a>
+      <a href="https://medium.com/@CarolineWriteups" class="article-card" target="_blank" rel="noopener"><span class="article-cat">Personal</span><h3>My Journey from Technical Writer to AI Researcher</h3><div class="article-meta">Medium <span>·</span> Good Vibes Good Life</div><div class="article-engagement">Featured publication</div></a>
+      <a href="https://medium.com/@CarolineWriteups" class="article-card" target="_blank" rel="noopener"><span class="article-cat">LLMs</span><h3>Inside LLM Evaluation: What Happens When AI Gets Things Wrong</h3><div class="article-meta">Medium <span>·</span> Mindful Data Science</div><div class="article-engagement">Mindful Data Science</div></a>
     </div>
-    <div style="margin-top:28px;text-align:center">
-      <a href="https://medium.com/@carolinegakii" class="btn btn-outline" target="_blank" rel="noopener">✍  Read All 140+ Articles on Medium</a>
-    </div>
+    <div style="margin-top:28px;text-align:center"><a href="https://medium.com/@CarolineWriteups" class="btn btn-outline" target="_blank" rel="noopener">✍  Read All 140+ Articles on Medium</a></div>
   </div>
 </section>
 
@@ -948,54 +312,10 @@
     <h2>Machine Learning Work</h2>
     <p class="section-sub">Hands-on AI and machine learning projects — not just writing about AI, but building and evaluating it.</p>
     <div class="projects-grid">
-      <div class="project-card">
-        <h3>AI-Powered Digital Microscope for Cancer &amp; Malaria Diagnosis</h3>
-        <p>Master's research project developing an AI-assisted digital pathology workflow using computer vision for histopathology image classification. Integrated with an OpenFlexure digital microscope for low-cost diagnostic support in resource-limited settings.</p>
-        <div class="project-tags">
-          <span class="tag tag-purple">TensorFlow</span>
-          <span class="tag tag-purple">Computer Vision</span>
-          <span class="tag tag-blue">ResNet50V2</span>
-          <span class="tag tag-blue">EfficientNetV2</span>
-          <span class="tag tag-blue">CoAtNet</span>
-          <span class="tag tag-green">Healthcare AI</span>
-        </div>
-        <a href="https://github.com/carolinegakii" class="project-link" target="_blank" rel="noopener">View on GitHub →</a>
-      </div>
-      <div class="project-card">
-        <h3>BreakHis Breast Cancer Classification</h3>
-        <p>CNN-based classification system for breast histopathology images using the BreakHis dataset. Trained and evaluated ResNet50V2, DenseNet121, and MobileNetV2 architectures, with focus on sensitivity, specificity, and ROC-AUC for clinical reliability.</p>
-        <div class="project-tags">
-          <span class="tag tag-purple">TensorFlow</span>
-          <span class="tag tag-purple">Keras</span>
-          <span class="tag tag-blue">DenseNet121</span>
-          <span class="tag tag-blue">MobileNetV2</span>
-          <span class="tag tag-green">Pathology AI</span>
-        </div>
-        <a href="https://github.com/carolinegakii" class="project-link" target="_blank" rel="noopener">View on GitHub →</a>
-      </div>
-      <div class="project-card">
-        <h3>Gastric Cancer AI Classification</h3>
-        <p>Deep learning model for gastric cancer histopathology classification. Investigated domain shift and model generalization across multiple medical imaging datasets to improve robustness in real-world clinical deployment.</p>
-        <div class="project-tags">
-          <span class="tag tag-purple">CoAtNet</span>
-          <span class="tag tag-purple">TensorFlow</span>
-          <span class="tag tag-blue">Domain Adaptation</span>
-          <span class="tag tag-green">Medical Imaging</span>
-        </div>
-        <a href="https://github.com/carolinegakii" class="project-link" target="_blank" rel="noopener">View on GitHub →</a>
-      </div>
-      <div class="project-card">
-        <h3>LLM Evaluation — Turing (NVIDIA Nemotron &amp; Qwen)</h3>
-        <p>Structured evaluation of frontier large language model outputs across complex reasoning, instruction-following, and factual accuracy tasks. Designed adversarial prompts exposing model failure cases; contributed human feedback for RLHF pipelines.</p>
-        <div class="project-tags">
-          <span class="tag tag-purple">LLM Evaluation</span>
-          <span class="tag tag-purple">RLHF</span>
-          <span class="tag tag-blue">Prompt Engineering</span>
-          <span class="tag tag-blue">NVIDIA Nemotron</span>
-          <span class="tag tag-blue">Qwen</span>
-        </div>
-        <a href="https://github.com/carolinegakii" class="project-link" target="_blank" rel="noopener">View GitHub →</a>
-      </div>
+      <div class="project-card"><h3>AI-Powered Digital Microscope for Cancer &amp; Malaria Diagnosis</h3><p>Master's research developing an AI-assisted digital pathology workflow using computer vision for histopathology image classification. Integrated with an OpenFlexure digital microscope for low-cost diagnostic support.</p><div class="project-tags"><span class="tag tag-purple">TensorFlow</span><span class="tag tag-purple">Computer Vision</span><span class="tag tag-blue">ResNet50V2</span><span class="tag tag-blue">EfficientNetV2</span><span class="tag tag-blue">CoAtNet</span><span class="tag tag-green">Healthcare AI</span></div><a href="https://github.com/CarolineGakii" class="project-link" target="_blank" rel="noopener">View on GitHub →</a></div>
+      <div class="project-card"><h3>BreakHis Breast Cancer Classification</h3><p>CNN-based classification for breast histopathology images. Trained and evaluated ResNet50V2, DenseNet121, and MobileNetV2 with focus on sensitivity, specificity, and ROC-AUC for clinical reliability.</p><div class="project-tags"><span class="tag tag-purple">TensorFlow</span><span class="tag tag-purple">Keras</span><span class="tag tag-blue">DenseNet121</span><span class="tag tag-blue">MobileNetV2</span><span class="tag tag-green">Pathology AI</span></div><a href="https://github.com/CarolineGakii" class="project-link" target="_blank" rel="noopener">View on GitHub →</a></div>
+      <div class="project-card"><h3>Gastric Cancer AI Classification</h3><p>Deep learning model for gastric cancer histopathology classification. Investigated domain shift and model generalization across multiple medical imaging datasets to improve robustness in real-world deployment.</p><div class="project-tags"><span class="tag tag-purple">CoAtNet</span><span class="tag tag-purple">TensorFlow</span><span class="tag tag-blue">Domain Adaptation</span><span class="tag tag-green">Medical Imaging</span></div><a href="https://github.com/CarolineGakii" class="project-link" target="_blank" rel="noopener">View on GitHub →</a></div>
+      <div class="project-card"><h3>LLM Evaluation — Turing (NVIDIA Nemotron &amp; Qwen)</h3><p>Structured evaluation of frontier LLM outputs across complex reasoning, instruction-following, and factual accuracy tasks. Designed adversarial prompts exposing failure cases; contributed human feedback for RLHF pipelines.</p><div class="project-tags"><span class="tag tag-purple">LLM Evaluation</span><span class="tag tag-purple">RLHF</span><span class="tag tag-blue">Prompt Engineering</span><span class="tag tag-blue">NVIDIA Nemotron</span><span class="tag tag-blue">Qwen</span></div><a href="https://github.com/CarolineGakii" class="project-link" target="_blank" rel="noopener">View GitHub →</a></div>
     </div>
   </div>
 </section>
@@ -1042,7 +362,7 @@
           <div class="timeline-role">Founder &amp; Editor</div>
           <div class="timeline-company">Mindful Data Science (Medium Publication)</div>
           <ul class="timeline-list">
-            <li>Founded independent publication making AI, machine learning, and data science accessible through practical tutorials.</li>
+            <li>Founded independent publication making AI, ML, and data science accessible through practical tutorials.</li>
             <li>Published 10+ technical articles covering computer vision, Python, SQL, and real-world AI deployment.</li>
           </ul>
         </div>
@@ -1055,7 +375,7 @@
           <div class="timeline-company">Medium</div>
           <ul class="timeline-list">
             <li>Published 140+ articles; built audience of 970+ followers.</li>
-            <li>Published in Good Vibes Good Life and Catharsis; produced stories receiving 3,100+, 1,600+, and 400+ claps.</li>
+            <li>Featured in Good Vibes Good Life and Catharsis; top stories received 3,100+, 1,600+, and 400+ claps.</li>
           </ul>
         </div>
       </div>
@@ -1067,7 +387,7 @@
           <div class="timeline-company">Turing</div>
           <ul class="timeline-list">
             <li>Conducted structured quality evaluations of AI-generated content.</li>
-            <li>Applied evaluation criteria for consistency; validated factual correctness with reliable evidence.</li>
+            <li>Validated factual correctness; identified reasoning errors and inconsistencies.</li>
           </ul>
         </div>
       </div>
@@ -1082,26 +402,10 @@
     <h2>Publications &amp; Platforms</h2>
     <p class="section-sub">Where my writing lives across the internet.</p>
     <div class="pubs-grid">
-      <a href="https://medium.com/@carolinegakii" class="pub-card" target="_blank" rel="noopener">
-        <span class="pub-icon">✍</span>
-        <div class="pub-name">Medium</div>
-        <div class="pub-desc">140+ articles · 970+ followers</div>
-      </a>
-      <a href="https://medium.com/@carolinegakii" class="pub-card" target="_blank" rel="noopener">
-        <span class="pub-icon">🧠</span>
-        <div class="pub-name">Mindful Data Science</div>
-        <div class="pub-desc">Founder &amp; Editor · AI tutorials</div>
-      </a>
-      <a href="https://medium.com/good-vibes-good-life" class="pub-card" target="_blank" rel="noopener">
-        <span class="pub-icon">🌞</span>
-        <div class="pub-name">Good Vibes Good Life</div>
-        <div class="pub-desc">Medium publication · Essays</div>
-      </a>
-      <a href="https://medium.com/catharsis" class="pub-card" target="_blank" rel="noopener">
-        <span class="pub-icon">📖</span>
-        <div class="pub-name">Catharsis</div>
-        <div class="pub-desc">Medium publication · Storytelling</div>
-      </a>
+      <a href="https://medium.com/@CarolineWriteups" class="pub-card" target="_blank" rel="noopener"><span class="pub-icon">✍</span><div class="pub-name">Medium</div><div class="pub-desc">140+ articles · 970+ followers</div></a>
+      <a href="https://medium.com/@CarolineWriteups" class="pub-card" target="_blank" rel="noopener"><span class="pub-icon">🧠</span><div class="pub-name">Mindful Data Science</div><div class="pub-desc">Founder &amp; Editor · AI tutorials</div></a>
+      <a href="https://medium.com/good-vibes-good-life" class="pub-card" target="_blank" rel="noopener"><span class="pub-icon">🌞</span><div class="pub-name">Good Vibes Good Life</div><div class="pub-desc">Medium publication · Essays</div></a>
+      <a href="https://medium.com/catharsis" class="pub-card" target="_blank" rel="noopener"><span class="pub-icon">📖</span><div class="pub-name">Catharsis</div><div class="pub-desc">Medium publication · Storytelling</div></a>
     </div>
   </div>
 </section>
@@ -1117,26 +421,18 @@
         <h3>✍ Content &amp; Technical Writing Resume</h3>
         <p>9 years of experience. $20K+ on Upwork. Top Rated. 140+ published articles. Specializing in AI, machine learning, SaaS, and developer education content for global clients.</p>
         <div class="resume-skills">
-          <span class="tag tag-blue">Technical Writing</span>
-          <span class="tag tag-blue">Content Strategy</span>
-          <span class="tag tag-blue">SEO</span>
-          <span class="tag tag-blue">White Papers</span>
-          <span class="tag tag-blue">Ghostwriting</span>
+          <span class="tag tag-blue">Technical Writing</span><span class="tag tag-blue">Content Strategy</span><span class="tag tag-blue">SEO</span><span class="tag tag-blue">White Papers</span><span class="tag tag-blue">Ghostwriting</span>
         </div>
-        <a href="resume/TechnicalWriterResume.pdf" class="btn btn-primary">📄 Download Writing Resume</a>
+        <a href="Content &amp; Technical Writer .pdf" class="btn btn-primary">📄 Download Writing Resume</a>
         <p style="font-size:12px;color:var(--muted);margin-top:-4px">PDF · Optimized for writing &amp; content roles</p>
       </div>
       <div class="resume-card">
         <h3>🤖 Data Science &amp; AI Resume</h3>
         <p>MSc Data Science candidate. LLM evaluator at Turing. Computer vision researcher. Skilled in Python, TensorFlow, CNN architectures, and structured AI quality assessment.</p>
         <div class="resume-skills">
-          <span class="tag tag-purple">LLM Evaluation</span>
-          <span class="tag tag-purple">Computer Vision</span>
-          <span class="tag tag-purple">TensorFlow</span>
-          <span class="tag tag-purple">Python</span>
-          <span class="tag tag-purple">RLHF</span>
+          <span class="tag tag-purple">LLM Evaluation</span><span class="tag tag-purple">Computer Vision</span><span class="tag tag-purple">TensorFlow</span><span class="tag tag-purple">Python</span><span class="tag tag-purple">RLHF</span>
         </div>
-        <a href="resume/AIResume.pdf" class="btn btn-primary">📄 Download AI Resume</a>
+        <a href="Data Scientist and AI Trainer.pdf" class="btn btn-primary">📄 Download AI Resume</a>
         <p style="font-size:12px;color:var(--muted);margin-top:-4px">PDF · Optimized for AI &amp; data science roles</p>
       </div>
     </div>
@@ -1148,34 +444,78 @@
   <div class="container">
     <p class="section-label">Client Reviews</p>
     <h2>What Clients Say</h2>
-    <p class="section-sub">Consistent 5-star reviews on Upwork from long-term, repeat clients.</p>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Caroline consistently delivers well-researched technical content that our engineering team loves. She understands AI at a level that most content writers simply don't — her articles are both technically accurate and genuinely engaging."</p>
-        <div class="testimonial-author">SaaS Client</div>
-        <div class="testimonial-role">AI Platform Company · Upwork</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"We've worked with Caroline for over a year. She takes complex machine learning topics and turns them into tutorials that our developer audience can actually use. Reliable, thorough, and always meets deadlines."</p>
-        <div class="testimonial-author">Repeat Client</div>
-        <div class="testimonial-role">Tech Startup · Upwork</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Exceptional writer who genuinely understands the technical subject matter. Her white paper on LLM deployment was exactly what we needed — clear, credible, and well-structured for both technical and non-technical readers."</p>
-        <div class="testimonial-author">AI Research Client</div>
-        <div class="testimonial-role">Enterprise Client · Upwork</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Caroline brings a rare combination of writing skill and real technical knowledge. She researched our product documentation, asked the right questions, and delivered content that our users immediately found more helpful."</p>
-        <div class="testimonial-author">Product Team</div>
-        <div class="testimonial-role">Software Company · Upwork</div>
+    <p class="section-sub">11 reviews from real clients on Upwork — every single one is 5 stars.</p>
+
+    <div class="reviews-summary">
+      <div class="reviews-score">5.0</div>
+      <div>
+        <span class="reviews-stars">★★★★★</span>
+        <div class="reviews-count">11 reviews · All 5-star · Upwork Top Rated</div>
       </div>
     </div>
-    <p style="text-align:center;margin-top:20px;font-size:13px;color:var(--muted)">🔗 <a href="https://www.upwork.com/freelancers/carolinegakii" style="color:var(--accent);text-decoration:none" target="_blank" rel="noopener">View all reviews on Upwork</a></p>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Caroline is very talented and she provided us with exactly the quality of content we were looking forward to. I recommend her thoroughly and really appreciate her attention to detail, top-notch communication and above all the willingness to go that extra mile to make innumerable revisions."</p>
+        <div class="testimonial-author">Verified Client</div>
+        <div class="testimonial-role">Upwork</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"This is my third time working with Caroline. She has done a great job. Excellent communication and completed articles ahead of the deadline. Looking forward to working with her again."</p>
+        <div class="testimonial-author">Repeat Client</div>
+        <div class="testimonial-role">Upwork · 3rd contract</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"An amazing and dedicated worker who ensured the work was delivered on time and was ready to publish. The only reason I'm having to end this contract is my client has pulled the funding. If the project comes back we'll rehire for sure!"</p>
+        <div class="testimonial-author">Verified Client</div>
+        <div class="testimonial-role">Upwork</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"It was a pleasure working with Caroline. She communicates well, open to discussion, and can work on articles according to deadlines. Looking forward to working with her again!"</p>
+        <div class="testimonial-author">Verified Client</div>
+        <div class="testimonial-role">Upwork</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Everything is done on time and she provides good-quality articles — smooth communication and open to discussion. Good job, thank you Caroline!"</p>
+        <div class="testimonial-author">Verified Client</div>
+        <div class="testimonial-role">Upwork</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"She delivers quality work and keeps deadlines. I will hire her again for any future project."</p>
+        <div class="testimonial-author">Verified Client</div>
+        <div class="testimonial-role">Upwork</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Quick turnaround. Understood my requirements and delivered content matching my expectations."</p>
+        <div class="testimonial-author">Verified Client</div>
+        <div class="testimonial-role">Upwork</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Caroline did very well, deep research, great work."</p>
+        <div class="testimonial-author">Verified Client</div>
+        <div class="testimonial-role">Upwork</div>
+      </div>
+
+    </div>
+    <div style="margin-top:24px;text-align:center">
+      <a href="https://www.upwork.com/freelancers/~01a499d5f67165c2e3" class="btn btn-outline" target="_blank" rel="noopener">⭐ View All Reviews on Upwork</a>
+    </div>
   </div>
 </section>
 
@@ -1185,25 +525,8 @@
     <p class="section-label">Education</p>
     <h2>Academic Background</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
-      <div class="project-card">
-        <h3>Master of Science in Data Science <span style="font-weight:400;color:var(--muted);font-size:13px">(Ongoing)</span></h3>
-        <p>Meru University of Science and Technology · Relevant areas: Machine Learning, Deep Learning, Data Mining, Time Series Analysis, Big Data Analytics, Optimization.</p>
-        <div class="project-tags">
-          <span class="tag tag-purple">Machine Learning</span>
-          <span class="tag tag-purple">Deep Learning</span>
-          <span class="tag tag-blue">Data Mining</span>
-          <span class="tag tag-green">Big Data</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <h3>Bachelor of Computer Technology</h3>
-        <p>Meru University of Science and Technology · Foundation in software development, databases, computer systems, and information technology.</p>
-        <div class="project-tags">
-          <span class="tag">Computer Science</span>
-          <span class="tag">Software Development</span>
-          <span class="tag">Databases</span>
-        </div>
-      </div>
+      <div class="project-card"><h3>Master of Science in Data Science <span style="font-weight:400;color:var(--muted);font-size:13px">(Ongoing)</span></h3><p>Meru University of Science and Technology · Machine Learning, Deep Learning, Data Mining, Time Series Analysis, Big Data Analytics, Optimization.</p><div class="project-tags"><span class="tag tag-purple">Machine Learning</span><span class="tag tag-purple">Deep Learning</span><span class="tag tag-blue">Data Mining</span><span class="tag tag-green">Big Data</span></div></div>
+      <div class="project-card"><h3>Bachelor of Computer Technology</h3><p>Meru University of Science and Technology · Foundation in software development, databases, computer systems, and information technology.</p><div class="project-tags"><span class="tag">Computer Science</span><span class="tag">Software Development</span><span class="tag">Databases</span></div></div>
     </div>
   </div>
 </section>
@@ -1216,44 +539,20 @@
     <p class="section-sub">Whether you need a technical article, white paper, AI tutorial, or long-term content partnership — I'd love to hear about your project.</p>
     <div class="contact-grid">
       <div class="contact-left">
-        <div class="avail-badge">
-          <span class="avail-dot"></span>
-          Available for new projects
-        </div>
+        <div class="avail-badge"><span class="avail-dot"></span>Available for new projects</div>
         <p>I work with startups, enterprises, SaaS companies, AI organizations, and publishers who need technically accurate, well-researched content. Typical turnaround is 3–5 business days for articles and 7–10 days for white papers.</p>
         <div class="contact-links">
-          <a href="mailto:caratechconsultancy@gmail.com" class="contact-link">
-            <span class="contact-icon">📧</span>
-            caratechconsultancy@gmail.com
-          </a>
-          <a href="https://www.linkedin.com/in/carolinegakii" class="contact-link" target="_blank" rel="noopener">
-            <span class="contact-icon">👥</span>
-            LinkedIn — Caroline Gakii
-          </a>
-          <a href="https://medium.com/@carolinegakii" class="contact-link" target="_blank" rel="noopener">
-            <span class="contact-icon">✍</span>
-            Medium — @carolinegakii
-          </a>
-          <a href="https://github.com/carolinegakii" class="contact-link" target="_blank" rel="noopener">
-            <span class="contact-icon">💻</span>
-            GitHub — carolinegakii
-          </a>
-          <a href="https://www.upwork.com/freelancers/carolinegakii" class="contact-link" target="_blank" rel="noopener">
-            <span class="contact-icon">⭐</span>
-            Upwork — Top Rated Freelancer
-          </a>
+          <a href="mailto:caratechconsultancy@gmail.com" class="contact-link"><span class="contact-icon">📧</span>caratechconsultancy@gmail.com</a>
+          <a href="https://www.linkedin.com/in/caroline-gakii-75775415b/" class="contact-link" target="_blank" rel="noopener"><span class="contact-icon">👥</span>LinkedIn — Caroline Gakii</a>
+          <a href="https://medium.com/@CarolineWriteups" class="contact-link" target="_blank" rel="noopener"><span class="contact-icon">✍</span>Medium — @CarolineWriteups</a>
+          <a href="https://github.com/CarolineGakii" class="contact-link" target="_blank" rel="noopener"><span class="contact-icon">💻</span>GitHub — CarolineGakii</a>
+          <a href="https://www.upwork.com/freelancers/~01a499d5f67165c2e3" class="contact-link" target="_blank" rel="noopener"><span class="contact-icon">⭐</span>Upwork — Top Rated Freelancer</a>
         </div>
       </div>
       <div class="contact-right">
         <h3>Send a Project Inquiry</h3>
-        <div class="form-field">
-          <label>Your Name</label>
-          <input type="text" />
-        </div>
-        <div class="form-field">
-          <label>Email Address</label>
-          <input type="email" />
-        </div>
+        <div class="form-field"><label>Your Name</label><input type="text" /></div>
+        <div class="form-field"><label>Email Address</label><input type="email" /></div>
         <div class="form-field">
           <label>Project Type</label>
           <select>
@@ -1269,10 +568,7 @@
             <option>Other</option>
           </select>
         </div>
-        <div class="form-field">
-          <label>Tell me about your project</label>
-          <textarea></textarea>
-        </div>
+        <div class="form-field"><label>Tell me about your project</label><textarea></textarea></div>
         <a href="mailto:caratechconsultancy@gmail.com" class="btn btn-primary" style="width:100%;justify-content:center">Send Message via Email</a>
         <p class="form-note">I typically respond within 24 hours. For urgent projects, email directly.</p>
       </div>
@@ -1295,8 +591,8 @@
         <a href="#projects">AI Projects</a>
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
-        <a href="https://medium.com/@carolinegakii" target="_blank" rel="noopener">Medium</a>
-        <a href="https://github.com/carolinegakii" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://medium.com/@CarolineWriteups" target="_blank" rel="noopener">Medium</a>
+        <a href="https://github.com/CarolineGakii" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
     <div class="footer-bottom">
